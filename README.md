@@ -1,26 +1,26 @@
 # Battle-Bot-Arena-Server-Client-App
 
-##What is it?
+## What is it?
 A client program that controls a bot in the arena. The game's timing is based on the number of messages received by the server from the client. When movement rate, number of shots and recharge rate are discussed below, it is based on the messages received by the server, but the server protocol will determine a regular the amount of time between messages.
 
 The client controls the movement and firing of the bot. You will also be able to scan
 the area around you bot for other bots and bullets. During the setup of your bot, you will be able to
 choose to add to the attributes of your bot.
 
-##Running the Server
+## Running the Server
 The server takes at least 1 parameters which is the number of players.
                   java -jar BatBot161.jar  2  
 starts it up with 2 players
 ![image](https://user-images.githubusercontent.com/47125700/170398188-a8748d26-8ee0-4ad0-a172-c4260804e31f.png)
 
-###Multiplayer Game
+### Multiplayer Game
 For teams you need an extra parameter, the number of players per team.
   2 teams of 2 players
                   java -jar BatBot161.jar  4  2
   2 teams, where it's 3 on one team and 1 on the second is
                   java -jar BatBot161.jar  4  3  
 
-##Run an AI Bot to Play Against
+## Run an AI Bot to Play Against
 Running the bot client jar takes 2 parameters : hostname and port number.  
 The port is always 3012, localhost if you are running on the same machine.
                   java -jar strafe.jar localhost 3012
@@ -28,19 +28,19 @@ connects a bot called Strafe to the server
 ![image](https://user-images.githubusercontent.com/47125700/170398778-ae513395-739f-4663-a00d-4c9f4d60918a.png)
 When a client is connected to the server succesfully, the server prints client PID: status
 
-##Game Setup Stage
+## Game Setup Stage
 After the connection, server sends you:
 PID WidthArena HeightArena NumberOfBots Team
 *note: Team is your team number. You cannot hurt/be hurt by player on the same team. If Team is 0, there are no teams.
 
 Example message: 1 250 250 2 1 *You are player 1, arena is 250x250, there are 2 players, you are on Team 1.
 
-##Player Stats Customization
+## Player Stats Customization
 At this point, server expects client to send back:
 NameOfBot ArmourValue BulletValue ScanValue
 Example message: Superbot 0 0 3 *note: does not need to use all 5 points
 
-##Start the Game
+## Start the Game
 Once clients receive the first status message the game has started and the server sends a status
 message every time the server is ready to accept a new action from the client.
 status message:
@@ -68,7 +68,7 @@ distance. Note if will return your bullets too. ShotCount and MoveCount will inc
 
 ![image](https://user-images.githubusercontent.com/47125700/170397952-ae95e0c6-4f52-45b0-89ad-8f4a4bcea4ca.png)
 
-###About how bots and bullets are drawn in the arena and collisions
+### About how bots and bullets are drawn in the arena and collisions
 All bots are drawn as a 10x10 square. The position show by the status message is the upper
 left point. So if the bot status shows 150 150, the bot is drawn from 150,150 to 150,160, to 160,160
 and 160,150, and back to 150,150. Bullets are also drawn as a square and the position shown in
