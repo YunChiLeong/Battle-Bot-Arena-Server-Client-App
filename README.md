@@ -8,9 +8,11 @@ the area around you bot for other bots and bullets. During the setup of your bot
 choose to add to the attributes of your bot.
 
 ## Running the Server
-The server takes at least 1 parameters which is the number of players.
-![image](https://user-images.githubusercontent.com/47125700/170398188-a8748d26-8ee0-4ad0-a172-c4260804e31f.png)
-This command starts a game with 2 players.
+The server takes at least 1 parameters which is the number of players
+
+![image](https://user-images.githubusercontent.com/47125700/170401685-37a1cae8-53e2-4254-a10e-3151fd7e1e21.png)
+
+//This command starts a game with 2 players
 
 ### Multiplayer Game
 For teams you need an extra parameter, the number of players per team.
@@ -29,14 +31,17 @@ When a client is connected to the server succesfully, the server prints client P
 ## Game Setup Stage
 After the connection, server sends you:
 PID WidthArena HeightArena NumberOfBots Team
-*note: Team is your team number. You cannot hurt/be hurt by player on the same team. If Team is 0, there are no teams.
+//Team is your team number. You cannot hurt/be hurt by player on the same team. If Team is 0, there are no teams.
 
-Example message: 1 250 250 2 1 *You are player 1, arena is 250x250, there are 2 players, you are on Team 1.
+Example message: 1 250 250 2 1 
+//You are player 1, arena is 250x250, there are 2 players, you are on Team 1.
 
 ## Player Stats Customization
 At this point, server expects client to send back:
+
 NameOfBot ArmourValue BulletValue ScanValue
-Example message: Superbot 0 0 3 *note: does not need to use all 5 points
+
+//note: does not need to use all 5 points
 
 ## Start the Game
 Once clients receive the first status message the game has started and the server sends a status
