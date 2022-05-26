@@ -14,13 +14,6 @@ The server takes at least 1 parameters which is the number of players
 
 //This command starts a game with 2 players
 
-### Multiplayer Game
-For teams you need an extra parameter, the number of players per team.
-  2 teams of 2 players
-                  java -jar BatBot161.jar  4  2
-  2 teams, where it's 3 on one team and 1 on the second is
-                  java -jar BatBot161.jar  4  3  
-
 ## Connect from the Client App
 Inputs the host server ip address in the Client Mobile App
 ![download1](https://user-images.githubusercontent.com/47125700/170406345-1ff50584-a223-4cbf-b5b7-3dec3dfe7c99.png)
@@ -31,6 +24,12 @@ The port is always 3012, localhost if you are running on the same machine
 ![image](https://user-images.githubusercontent.com/47125700/170398778-ae513395-739f-4663-a00d-4c9f4d60918a.png)
 This command connects a bot called Strafe to the server
 When a client is connected to the server succesfully, the server prints client PID: status
+
+## ...Or Play Against Friends in Multiplayer Games
+To assign teams you need an extra parameter, the number of players per team.
+
+*  java -jar BatBot161.jar  4  2  (4 players in total, 2 teams of 2 players)     
+*  java -jar BatBot161.jar  4  3  (4 players in total, 2 teams, where it's 3 on one team and 1 on the second)
 
 ## Game Setup Stage
 After the connection, server sends you:   PID WidthArena HeightArena NumberOfBots Team
