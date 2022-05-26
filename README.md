@@ -73,7 +73,7 @@ distance. Note if will return your bullets too. ShotCount and MoveCount will inc
 ## Server Client Activities Log
 ![image](https://user-images.githubusercontent.com/47125700/170403859-9cc90cfb-6536-4cbc-87f5-52c92ee93260.png)
 
-## Game Over
+## Lost to AI :(
 ![image](https://user-images.githubusercontent.com/47125700/170404241-04017d5a-69ad-43ee-b348-0fece4bc900a.png)
 
 
