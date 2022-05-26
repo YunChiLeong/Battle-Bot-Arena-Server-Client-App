@@ -15,7 +15,7 @@ The server takes at least 1 parameters which is the number of players
 //This command starts a game with 2 players
 
 ## Connect from the Client App
-Inputs the host server ip address in the Client Mobile App
+Input the host server ip address in the Client Mobile App.
 ![download1](https://user-images.githubusercontent.com/47125700/170406345-1ff50584-a223-4cbf-b5b7-3dec3dfe7c99.png)
 
 ## Run an AI Bot to Play Against
