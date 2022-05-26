@@ -21,6 +21,10 @@ For teams you need an extra parameter, the number of players per team.
   2 teams, where it's 3 on one team and 1 on the second is
                   java -jar BatBot161.jar  4  3  
 
+## Connect from the Client App
+Inputs the host server ip address in the Client Mobile App
+![download1](https://user-images.githubusercontent.com/47125700/170406345-1ff50584-a223-4cbf-b5b7-3dec3dfe7c99.png)
+
 ## Run an AI Bot to Play Against
 Running the bot client jar takes 2 parameters : hostname and port number.  
 The port is always 3012, localhost if you are running on the same machine
@@ -29,29 +33,27 @@ This command connects a bot called Strafe to the server
 When a client is connected to the server succesfully, the server prints client PID: status
 
 ## Game Setup Stage
-After the connection, server sends you:
-PID WidthArena HeightArena NumberOfBots Team
+After the connection, server sends you:   PID WidthArena HeightArena NumberOfBots Team
+
 //Team is your team number. You cannot hurt/be hurt by player on the same team. If Team is 0, there are no teams.
 
-Example message: 1 250 250 2 1 
-//You are player 1, arena is 250x250, there are 2 players, you are on Team 1.
+### Bot Build Customizations
+At this point, server expects client to send back:    NameOfBot ArmourValue BulletValue ScanValue
+![dwld2](https://user-images.githubusercontent.com/47125700/170407022-8e3a73bc-9da5-4471-97ad-4c97f9463680.png)
 
-## Player Stats Customization
-At this point, server expects client to send back:
-
-NameOfBot ArmourValue BulletValue ScanValue
-
-//note: does not need to use all 5 points
-
-## Start the Game
+## The Game Has Started!
 Once clients receive the first status message the game has started and the server sends a status
 message every time the server is ready to accept a new action from the client.
 status message:
 Status X Y MoveCount ShotCount HP
-                  example: Status 162 110 0 0 2 
-at position 162,110 You can shoot and move, Armor value of 2
-                  example: Status 162 110 0 -10 2
-at position 162,110 You can move. 10 messages until you can shoot. Armor value of 2
+
+example: Status 162 110 0 0 2 
+*means at position 162,110 You can shoot and move, Armor value of 2*
+![download3](https://user-images.githubusercontent.com/47125700/170408031-f7639988-c7fc-497e-894e-ec0abd64fda2.png)
+
+![image](https://user-images.githubusercontent.com/47125700/170403989-6f3d5f27-7925-4793-b156-50e811243a8a.png)
+
+### Noop, Move, Fire, Scan!
 Once the Status message is read, the server is now ready to receive one command. The client can
 send 1 of 4 different messages: noop, move, fire, scan
 1. Noop, do nothing, but MoveCount and ShotCount counts will increment if non-zero.
@@ -69,7 +71,12 @@ remain unchanged.
 distance. Note if will return your bullets too. ShotCount and MoveCount will increment if nonzero.
                  message: scan
 
-![image](https://user-images.githubusercontent.com/47125700/170397952-ae95e0c6-4f52-45b0-89ad-8f4a4bcea4ca.png)
+## Server Client Activities Log
+![image](https://user-images.githubusercontent.com/47125700/170403859-9cc90cfb-6536-4cbc-87f5-52c92ee93260.png)
+
+## Game Over
+![image](https://user-images.githubusercontent.com/47125700/170404241-04017d5a-69ad-43ee-b348-0fece4bc900a.png)
+
 
 ## About how bots and bullets are drawn in the arena and collisions
 All bots are drawn as a 10x10 square. The position show by the status message is the upper
