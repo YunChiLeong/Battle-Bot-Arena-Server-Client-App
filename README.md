@@ -74,7 +74,7 @@ distance. Note if will return your bullets too. ShotCount and MoveCount will inc
 ![image](https://user-images.githubusercontent.com/47125700/170403859-9cc90cfb-6536-4cbc-87f5-52c92ee93260.png)
 
 ## Lost to AI :(
-![image](https://user-images.githubusercontent.com/47125700/170404241-04017d5a-69ad-43ee-b348-0fece4bc900a.png)
+![image](https://user-images.githubusercontent.com/47125700/170411498-753c0d0c-d513-4b96-889e-29c841f9f2b1.png)
 
 
 ## About how bots and bullets are drawn in the arena and collisions
