@@ -34,7 +34,7 @@ To assign teams you need an extra parameter, the number of players per team.
 ## Game Setup Stage
 After the connection, server sends you:   PID WidthArena HeightArena NumberOfBots Team
 
-//Team is your team number. You cannot hurt/be hurt by player on the same team. If Team is 0, there are no teams.
+Team is your team number. You cannot hurt/be hurt by player on the same team. If Team is 0, there are no teams.
 
 Messages to and from server are updated and displayed at the top right in the app.
 
