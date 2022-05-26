@@ -9,9 +9,8 @@ choose to add to the attributes of your bot.
 
 ## Running the Server
 The server takes at least 1 parameters which is the number of players.
-                  java -jar BatBot161.jar  2  
-starts it up with 2 players
 ![image](https://user-images.githubusercontent.com/47125700/170398188-a8748d26-8ee0-4ad0-a172-c4260804e31f.png)
+This command starts a game with 2 players.
 
 ### Multiplayer Game
 For teams you need an extra parameter, the number of players per team.
@@ -22,10 +21,9 @@ For teams you need an extra parameter, the number of players per team.
 
 ## Run an AI Bot to Play Against
 Running the bot client jar takes 2 parameters : hostname and port number.  
-The port is always 3012, localhost if you are running on the same machine.
-                  java -jar strafe.jar localhost 3012
-connects a bot called Strafe to the server
+The port is always 3012, localhost if you are running on the same machine
 ![image](https://user-images.githubusercontent.com/47125700/170398778-ae513395-739f-4663-a00d-4c9f4d60918a.png)
+This command connects a bot called Strafe to the server
 When a client is connected to the server succesfully, the server prints client PID: status
 
 ## Game Setup Stage
@@ -68,7 +66,7 @@ distance. Note if will return your bullets too. ShotCount and MoveCount will inc
 
 ![image](https://user-images.githubusercontent.com/47125700/170397952-ae95e0c6-4f52-45b0-89ad-8f4a4bcea4ca.png)
 
-### About how bots and bullets are drawn in the arena and collisions
+## About how bots and bullets are drawn in the arena and collisions
 All bots are drawn as a 10x10 square. The position show by the status message is the upper
 left point. So if the bot status shows 150 150, the bot is drawn from 150,150 to 150,160, to 160,160
 and 160,150, and back to 150,150. Bullets are also drawn as a square and the position shown in
